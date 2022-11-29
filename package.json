@@ -1,0 +1,37 @@
+{
+  "name": "imc-class-eng-software",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/express": "^4.17.14",
+    "@types/sinon": "^10.0.13",
+    "ava": "^2.4.0",
+    "express": "^4.18.2",
+    "sinon": "^15.0.0",
+    "sucrase": "^3.29.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  },
+  "scripts": {
+    "dev": "ts-node-dev ./src/server.ts",
+    "test": "ava"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "files": [
+      "!dist"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "sucrase/register/ts"
+    ]
+  },
+  "author": "memo",
+  "license": "ISC"
+}
